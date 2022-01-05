@@ -17,6 +17,7 @@ public class LoseMenuManager : MonoBehaviour
 
     public void Quit()
     {
+        PlayerPrefs.Save();
         Application.Quit();
     }
 }

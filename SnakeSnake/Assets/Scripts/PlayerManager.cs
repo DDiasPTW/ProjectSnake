@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
     public GameObject defaultCanvas, oppositeCanvas, loseCanvas;
+
+    public TMP_Text scoreText;
+    private float timeAlive;
 
     private void Awake()
     {
@@ -21,20 +25,24 @@ public class PlayerManager : MonoBehaviour
             //se opposite
             defaultCanvas.SetActive(false); oppositeCanvas.SetActive(true);
         }
-
-        
-        
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Death"))
+        if (transform.position.y <= 0) //perdeu
         {
-            //Jogador perdeu, aparece loss menu
             loseCanvas.SetActive(true);
             Time.timeScale = 0;
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            if (PlayerPrefs.GetInt("HS") < (int)timeAlive)
+            {
+                PlayerPrefs.SetInt("HS", (int)timeAlive);
+                PlayerPrefs.Save();
+            }
         }
 
+        //highScore
+        timeAlive += Time.deltaTime;
+        scoreText.text = timeAlive.ToString("F0");
     }
 }
