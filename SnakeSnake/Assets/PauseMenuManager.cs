@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoseMenuManager : MonoBehaviour
+public class PauseMenuManager : MonoBehaviour
 {
-
+    private void OnEnable()
+    {
+        Time.timeScale = 0;
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.M))
@@ -13,7 +16,7 @@ public class LoseMenuManager : MonoBehaviour
             ReturnToMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             TryAgain();
         }
@@ -30,7 +33,8 @@ public class LoseMenuManager : MonoBehaviour
 
     public void TryAgain()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        gameObject.SetActive(false);
     }
 
     public void Quit()

@@ -12,9 +12,12 @@ public class PlayerPrefsManager : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        PlayerPrefs.GetInt("Default", 0); //0 = Default, 1 = alternativo
+        //PlayerPrefs.GetInt("Default", 0); //0 = Default, 1 = alternativo
+
         PlayerPrefs.GetInt("HS", 0); //HighScore
+
         PlayerPrefs.GetInt("Coins", 0); //Credits/coins/money whatever
+
         Colors();
 
         if (PlayerPrefs.GetInt("Color") == 0)
@@ -57,7 +60,8 @@ public class PlayerPrefsManager : MonoBehaviour
             PlayerPrefs.SetInt("Color", 1); //current color palette
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
+        //CLEAR ALL
+        if (Input.GetKeyDown(KeyCode.L))
         {
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();

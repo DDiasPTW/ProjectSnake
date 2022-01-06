@@ -23,6 +23,57 @@ public class ShopMenuManager : MonoBehaviour
         CheckColor();
 
         CheckUnlocked();
+
+        CheckInputs();
+    }
+
+    private void CheckInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Back();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Color1();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Color2();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            Color3();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            Color4();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            Color5();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            Color6();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            Color7();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            Color8();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            Color9();
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+        {
+            Color10();
+        }
     }
 
     private void CheckColor()

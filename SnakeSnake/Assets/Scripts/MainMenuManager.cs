@@ -5,13 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public GameObject otherSettingsMenu;
     public GameObject ShopMenu;
 
     private void Awake()
     {
-        otherSettingsMenu.SetActive(false);
         ShopMenu.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            PlayButton();
+        }
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            Shop();
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Quit();
+        }
     }
     public void PlayButton()
     {
@@ -28,11 +42,5 @@ public class MainMenuManager : MonoBehaviour
     {
         //abrir o menu da shop, blah blah
         ShopMenu.SetActive(true);
-    }
-
-    public void OtherSettings()
-    {
-        //abrir menu de other settings
-        otherSettingsMenu.SetActive(true);
     }
 }

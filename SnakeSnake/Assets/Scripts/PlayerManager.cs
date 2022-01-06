@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public GameObject defaultCanvas, oppositeCanvas, loseCanvas;
+    public GameObject loseCanvas;
+    public GameObject pauseCanvas;
 
     public TMP_Text scoreText;
     private float timeAlive;
@@ -24,17 +25,17 @@ public class PlayerManager : MonoBehaviour
         Coins = PlayerPrefs.GetInt("Coins");
         palette = GameObject.FindGameObjectWithTag("Floor").GetComponent<ColorPaletteManager>();
         loseCanvas.SetActive(false);
-
+        pauseCanvas.SetActive(false);
         
         //se !opposite
-        if (PlayerPrefs.GetInt("Default") == 0)  //0 = Default, 1 = alternativo
-        {
-            defaultCanvas.SetActive(true); oppositeCanvas.SetActive(false);
-        }else if (PlayerPrefs.GetInt("Default") == 1)
-        {
-            //se opposite
-            defaultCanvas.SetActive(false); oppositeCanvas.SetActive(true);
-        }
+        //if (PlayerPrefs.GetInt("Default") == 0)  //0 = Default, 1 = alternativo
+        //{
+        //    defaultCanvas.SetActive(true); oppositeCanvas.SetActive(false);
+        //}else if (PlayerPrefs.GetInt("Default") == 1)
+        //{
+        //    //se opposite
+        //    defaultCanvas.SetActive(false); oppositeCanvas.SetActive(true);
+        //}
         
         CheckColorPalette();
         gameObject.GetComponent<MeshRenderer>().material = material;
@@ -54,6 +55,11 @@ public class PlayerManager : MonoBehaviour
                 PlayerPrefs.SetInt("HS", Score);
                 PlayerPrefs.Save();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseCanvas.SetActive(true);
         }
 
         //highScore
