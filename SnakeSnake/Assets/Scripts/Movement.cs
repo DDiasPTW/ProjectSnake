@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 2f;
+    public float maxSpeed = 5f;
     private bool isRight, isLeft, isForward, isBack;
     private float globalGravity = -9.81f;
     public float gravityScale = 1f;
@@ -35,11 +36,17 @@ public class Movement : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             Back();
-        }
+        }        
     }
 
     private void FixedUpdate()
     {
+        if (speed < maxSpeed)
+        {
+            speed += Time.deltaTime * .013f; //after around 5 mins it should reach the max speed (6f)
+        }
+        else speed = maxSpeed;
+        
         //set gravity
         Vector3 gravity = globalGravity * gravityScale * Vector3.up;
         rb.AddForce(gravity, ForceMode.Acceleration);

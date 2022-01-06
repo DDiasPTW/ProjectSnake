@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2553403181698087548}
   - component: {fileID: 5164979270760264803}
   - component: {fileID: 837496060}
+  - component: {fileID: 1195471430}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Floor
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fc2a0b6f458c34c45b7ac23ec06e6130, type: 2}
+  - {fileID: 2100000, guid: 182e4633e8d22af45b00fe274a0d78f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,10 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbdcd1da79b34d4ca831585fecb59c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathTime: 2
+  deathTime: 1
   startAutoDeath: 0
-  autoDeathTime: 20
+  autoDeathTime: 8
   canDie: 0
+  defaultMaterial: {fileID: 0}
   walkedOnMaterial: {fileID: 0}
 --- !u!114 &837496060
 MonoBehaviour:
@@ -133,5 +135,57 @@ MonoBehaviour:
   Front: 0
   Back: 0
   CanPlace: 1
-  minDistance: 50
+  minDistance: 30
   cubePrefab: {fileID: 2553403181698087550}
+--- !u!114 &1195471430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2553403181698087550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f221a3b1b996b4bb33f318873fe3c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  palette1:
+  - {fileID: 2100000, guid: 6fa62ac76eced7b4186ec195da5ba7a8, type: 2}
+  - {fileID: 2100000, guid: 0d1cb131e77ed5245a45c774a688b530, type: 2}
+  - {fileID: 2100000, guid: 0b8957d12b1dc7e41a266f610de5192e, type: 2}
+  palette2:
+  - {fileID: 2100000, guid: 4b6e7299827aa664d92279c1990f7a0a, type: 2}
+  - {fileID: 2100000, guid: 94d78313632850041b111ef650f74503, type: 2}
+  - {fileID: 2100000, guid: b92156fde969802478d93670419a64bb, type: 2}
+  palette3:
+  - {fileID: 2100000, guid: eff747700dbc34849879e846b64f43ed, type: 2}
+  - {fileID: 2100000, guid: 2e71f779207eba0488b76b93474508ee, type: 2}
+  - {fileID: 2100000, guid: 3f1e6d32b1677d144a1ddb3825d04325, type: 2}
+  palette4:
+  - {fileID: 2100000, guid: 55e44e8041b4ae244b449f2a83c1b3bb, type: 2}
+  - {fileID: 2100000, guid: e52743655f49266468a13d2ee71ba7ed, type: 2}
+  - {fileID: 2100000, guid: c7402341ae32fae46a35fa2b6134b02d, type: 2}
+  palette5:
+  - {fileID: 2100000, guid: 42a5985c28b0d93408f95b68f993127d, type: 2}
+  - {fileID: 2100000, guid: b64a7cab615358d4c8b2e01844fccdd0, type: 2}
+  - {fileID: 2100000, guid: 29314be91a7677646a1d1a3de2de5fac, type: 2}
+  palette6:
+  - {fileID: 2100000, guid: 0159087976d15404b9813cfb2408e520, type: 2}
+  - {fileID: 2100000, guid: e06564b4a51b5204eb4140c8705f10e3, type: 2}
+  - {fileID: 2100000, guid: 97876d9e18b1f5f4dbedc1b64d203705, type: 2}
+  palette7:
+  - {fileID: 2100000, guid: 43f89b00667285b439c79197956188e8, type: 2}
+  - {fileID: 2100000, guid: 96ba4e0121d71a042945bc053acb844a, type: 2}
+  - {fileID: 2100000, guid: 41bdb65dd1214394ebf2db3d18f008f3, type: 2}
+  palette8:
+  - {fileID: 2100000, guid: b57dee624eebfc64fb64e57c6894dad3, type: 2}
+  - {fileID: 2100000, guid: 652f344217743174295b1289b8aa57ce, type: 2}
+  - {fileID: 2100000, guid: 744b500ddb67c3a4e9c56c9c05608ff8, type: 2}
+  palette9:
+  - {fileID: 2100000, guid: f28c5c3252018484f9350045d4623d6d, type: 2}
+  - {fileID: 2100000, guid: 1a8976d162d1a004dace8a07b90842ad, type: 2}
+  - {fileID: 2100000, guid: 0d2f86e19e3f837428e6053f02af9e71, type: 2}
+  palette10:
+  - {fileID: 2100000, guid: 7c25aae6a17d23a4aa5e600d85a1ae28, type: 2}
+  - {fileID: 2100000, guid: 182e4633e8d22af45b00fe274a0d78f1, type: 2}
+  - {fileID: 2100000, guid: 5c7b4271649f32a42b93c0bc19b134a1, type: 2}

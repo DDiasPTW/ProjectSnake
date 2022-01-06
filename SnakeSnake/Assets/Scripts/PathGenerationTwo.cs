@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathGenerationTwo : MonoBehaviour
 {
-    public float spawnDelay = 0.1f;
+    public float spawnDelay = 0.4f;
     private float delay;
 
 
@@ -13,15 +13,19 @@ public class PathGenerationTwo : MonoBehaviour
     [SerializeField] private float minDistance;
     public GameObject cubePrefab;
 
+    private GameObject difficultyManager;
+
     private void Start()
     {
         CanPlace = true;
         delay = spawnDelay;
+        difficultyManager = GameObject.FindGameObjectWithTag("DM");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void Update()
     {
+        spawnDelay = difficultyManager.GetComponent<DifficultyManager>().spawnSpeed;
 
         delay -= Time.deltaTime;
         if (delay <= 0)
@@ -31,7 +35,6 @@ public class PathGenerationTwo : MonoBehaviour
                 GeneratePath();
             }
         }
-        
     }
 
     private void FixedUpdate()
