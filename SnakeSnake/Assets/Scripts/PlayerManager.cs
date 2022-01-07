@@ -28,7 +28,7 @@ public class PlayerManager : MonoBehaviour
         pauseCanvas.SetActive(false);
         
         //se !opposite
-        //if (PlayerPrefs.GetInt("Default") == 0)  //0 = Default, 1 = alternativo
+        //if (PlayerPrefs.GetInt("Default") == 0)  //0 = Default, 1 = alternativo, this was for mobile support
         //{
         //    defaultCanvas.SetActive(true); oppositeCanvas.SetActive(false);
         //}else if (PlayerPrefs.GetInt("Default") == 1)
@@ -46,15 +46,15 @@ public class PlayerManager : MonoBehaviour
     {
         if (transform.position.y <= 0) //perdeu
         {
+            PlayerPrefs.SetInt("Coins", Coins);
             loseCanvas.SetActive(true);
-            Time.timeScale = 0;
-            PlayerPrefs.SetInt("Coins", Coins); 
-
             if (PlayerPrefs.GetInt("HS") < Score)
             {
                 PlayerPrefs.SetInt("HS", Score);
                 PlayerPrefs.Save();
             }
+            
+            Time.timeScale = 0;
         }
 
         if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))

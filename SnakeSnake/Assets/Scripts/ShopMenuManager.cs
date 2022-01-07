@@ -14,11 +14,12 @@ public class ShopMenuManager : MonoBehaviour
     private void OnEnable()
     {
         CheckColor();
+        CheckUnlocked();
     }
 
     private void Update()
     {
-        coins.text = "Coins: " + PlayerPrefs.GetInt("Coins").ToString();
+        coins.text = "Credits: " + PlayerPrefs.GetInt("Coins").ToString();
 
         CheckColor();
 
@@ -144,47 +145,47 @@ public class ShopMenuManager : MonoBehaviour
         if (PlayerPrefs.GetInt("Unlocked2") == 1)
         {
             price2.SetActive(false);
-        }else price2.SetActive(true);
+        }else price2.SetActive(true); price2.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked3") == 1)
         {
             price3.SetActive(false);
         }
-        else price3.SetActive(true);
+        else price3.SetActive(true); price3.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked4") == 1)
         {
             price4.SetActive(false);
         }
-        else price4.SetActive(true);
+        else price4.SetActive(true); price4.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked5") == 1)
         {
             price5.SetActive(false);
         }
-        else price5.SetActive(true);
+        else price5.SetActive(true); price5.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked6") == 1)
         {
             price6.SetActive(false);
         }
-        else price6.SetActive(true);
+        else price6.SetActive(true); price6.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked7") == 1)
         {
             price7.SetActive(false);
         }
-        else price7.SetActive(true);
+        else price7.SetActive(true); price7.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked8") == 1)
         {
             price8.SetActive(false);
         }
-        else price8.SetActive(true);
+        else price8.SetActive(true); price8.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked9") == 1)
         {
             price9.SetActive(false);
         }
-        else price9.SetActive(true);
+        else price9.SetActive(true); price9.GetComponent<TMP_Text>().text = Price.ToString();
         if (PlayerPrefs.GetInt("Unlocked10") == 1)
         {
             price10.SetActive(false);
         }
-        else price10.SetActive(true);
+        else price10.SetActive(true); price10.GetComponent<TMP_Text>().text = Price.ToString();
     }
 
     public void Back()

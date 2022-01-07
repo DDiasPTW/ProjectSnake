@@ -16,7 +16,7 @@ public class PauseMenuManager : MonoBehaviour
             ReturnToMenu();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.R))
         {
             TryAgain();
         }
@@ -28,6 +28,7 @@ public class PauseMenuManager : MonoBehaviour
     }
     public void ReturnToMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MainMenu");
     }
 

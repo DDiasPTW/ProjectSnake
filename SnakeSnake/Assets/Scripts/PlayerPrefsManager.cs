@@ -61,11 +61,11 @@ public class PlayerPrefsManager : MonoBehaviour
         }
 
         //CLEAR ALL
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            PlayerPrefs.DeleteAll();
-            PlayerPrefs.Save();
-        }
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+        //    PlayerPrefs.DeleteAll();
+        //    PlayerPrefs.Save();
+        //}
     }
 
     private void CheckUnlocked()
@@ -109,7 +109,7 @@ public class PlayerPrefsManager : MonoBehaviour
         if (PlayerPrefs.GetInt("Unlocked10") == 1)
         {
             color10 = true;
-        }
+        }       
     }
 
     private void Colors()

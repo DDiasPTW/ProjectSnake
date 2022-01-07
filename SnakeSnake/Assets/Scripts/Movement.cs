@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody rb;
     public float speed = 2f;
-    public float maxSpeed = 5f;
+    public float maxSpeed = 8f;
     private bool isRight, isLeft, isForward, isBack;
     private float globalGravity = -9.81f;
     public float gravityScale = 1f;
@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
     {
         if (speed < maxSpeed)
         {
-            speed += Time.deltaTime * .013f; //after around 5 mins it should reach the max speed (6f)
+            speed += Time.deltaTime * .0143f; //after around 7 mins it should reach the max speed (8f) with the start speed of 2f 
         }
         else speed = maxSpeed;
         

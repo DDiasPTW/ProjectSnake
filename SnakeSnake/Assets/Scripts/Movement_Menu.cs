@@ -25,6 +25,9 @@ public class Movement_Menu : MonoBehaviour
 
     private void Update()
     {
+        CheckColorPalette();
+        gameObject.GetComponent<MeshRenderer>().material = material;
+
         transform.position = Vector3.MoveTowards(transform.position, wayPoints[i].transform.position, speed * Time.deltaTime);
         if (Vector3.Distance(transform.position, wayPoints[i].transform.position) <= minDistance)
         {
@@ -35,10 +38,7 @@ public class Movement_Menu : MonoBehaviour
         if (i >= wayPoints.Length)
         {
             i = 0;
-        }
-
-        CheckColorPalette();
-        gameObject.GetComponent<MeshRenderer>().material = material;
+        } 
     }
 
     private void CheckColorPalette()

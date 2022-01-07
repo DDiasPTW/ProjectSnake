@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PathGenerationTwo : MonoBehaviour
 {
-    public float spawnDelay = 0.4f;
+    public float spawnDelay = 0.45f;
     private float delay;
 
 

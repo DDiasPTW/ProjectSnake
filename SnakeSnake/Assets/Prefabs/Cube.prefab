@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e438d83c4ce64d84e926130a9ffde139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnDelay: 0.4
+  spawnDelay: 0.45
   Right: 0
   Left: 0
   Front: 0
