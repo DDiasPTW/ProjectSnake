@@ -7,6 +7,10 @@ public class MainMenuManager : MonoBehaviour
 {
     public GameObject ShopMenu;
 
+    private void OnEnable()
+    {
+        Time.timeScale = 1;
+    }
     private void Awake()
     {
         ShopMenu.SetActive(false);
