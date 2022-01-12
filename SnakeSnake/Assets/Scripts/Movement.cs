@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
     {
         if (speed < maxSpeed)
         {
-            speed += Time.deltaTime * .0143f; //after around 7 mins it should reach the max speed (8f) with the start speed of 2f 
+            speed += Time.deltaTime * .0139f; //after around 6 mins it should reach the max speed (7f) with the start speed of 2f 
         }
         else speed = maxSpeed;
         

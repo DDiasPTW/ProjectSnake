@@ -55,7 +55,9 @@ public class CubeManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if(autoDeath) startAutoDeath -= Time.deltaTime; if (startAutoDeath <= 0) Destroy(gameObject); //caso seja um bloco que o jogador nunca toque destroi-se para poupar recursos
+        if(autoDeath) startAutoDeath -= Time.deltaTime;
+        if (startAutoDeath < deathTime) { gameObject.GetComponent<MeshRenderer>().material = walkedOnMaterial; }
+        if (startAutoDeath <= 0) Destroy(gameObject); //caso seja um bloco que o jogador nunca toque destroi-se para poupar recursos
     }
 
 

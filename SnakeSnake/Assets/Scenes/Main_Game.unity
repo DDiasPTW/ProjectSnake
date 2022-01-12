@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnSpeed: 0.4
-  minSpawnSpeed: 0.08
+  minSpawnSpeed: 0.11
 --- !u!4 &38751149
 Transform:
   m_ObjectHideFlags: 0
@@ -1689,10 +1689,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1776632392}
     m_Modifications:
-    - target: {fileID: 2553403181698087539, guid: c17d5696781817b4197a571336d790ec, type: 3}
-      propertyPath: m_Materials.Array.data[0]
+    - target: {fileID: 1931367141, guid: c17d5696781817b4197a571336d790ec, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1931367141, guid: c17d5696781817b4197a571336d790ec, type: 3}
+      propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 2100000, guid: e52743655f49266468a13d2ee71ba7ed, type: 2}
+      objectReference: {fileID: 8300000, guid: 8e00c2514b96cfe42a999107f13a7a31, type: 3}
     - target: {fileID: 2553403181698087549, guid: c17d5696781817b4197a571336d790ec, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4199,7 +4203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTime: 1
   startAutoDeath: 0
-  autoDeathTime: 8
+  autoDeathTime: 6
   canDie: 0
   defaultMaterial: {fileID: 0}
   walkedOnMaterial: {fileID: 0}
@@ -4372,11 +4376,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1651353316123643072, guid: dfddaf1cbc5d8594f9e522465f091eae, type: 3}
       propertyPath: maxSpeed
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1651353316123643072, guid: dfddaf1cbc5d8594f9e522465f091eae, type: 3}
       propertyPath: gravityScale
-      value: 35
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1651353316123643075, guid: dfddaf1cbc5d8594f9e522465f091eae, type: 3}
       propertyPath: scoreText
@@ -4458,7 +4462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTime: 1
   startAutoDeath: 0
-  autoDeathTime: 8
+  autoDeathTime: 6
   canDie: 0
   defaultMaterial: {fileID: 0}
   walkedOnMaterial: {fileID: 0}
@@ -4724,7 +4728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTime: 1
   startAutoDeath: 0
-  autoDeathTime: 8
+  autoDeathTime: 6
   canDie: 0
   defaultMaterial: {fileID: 0}
   walkedOnMaterial: {fileID: 0}
@@ -4840,7 +4844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathTime: 1
   startAutoDeath: 0
-  autoDeathTime: 8
+  autoDeathTime: 6
   canDie: 0
   defaultMaterial: {fileID: 0}
   walkedOnMaterial: {fileID: 0}

@@ -13939,7 +13939,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2135226281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13980,7 +13980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: {fileID: 698071941}
-  Price: 5000
+  Price: 3500
   border1: {fileID: 450686743}
   border2: {fileID: 1470348616}
   border3: {fileID: 476235905}

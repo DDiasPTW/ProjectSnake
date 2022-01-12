@@ -7,6 +7,8 @@ public class PathGenerationTwo : MonoBehaviour
     public float spawnDelay = 0.45f;
     private float delay;
 
+    private AudioSource aS;
+    [SerializeField] private float pitch;
 
     [SerializeField] private bool Right, Left, Front, Back, CanPlace;
     private GameObject player;
@@ -21,6 +23,7 @@ public class PathGenerationTwo : MonoBehaviour
         delay = spawnDelay;
         difficultyManager = GameObject.FindGameObjectWithTag("DM");
         player = GameObject.FindGameObjectWithTag("Player");
+        aS = GetComponent<AudioSource>();
     }
 
     private void Update()
