@@ -4105,14 +4105,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   i: 0
   tips:
-  - You can move using the arrow keys or by using WASD.
+  - You can move using the arrow keys or by using WASD!
   - Falling off the platform is kinda cringe, so don't do it :)
   - Your score gets converted to credits so that you can buy pretty new colors!
   - The game has full keyboard support so you can always have a free hand ;)
-  - The game has NO sound so that you can enjoy your own music! And because I don't
-    like creating sound...
   - Most shortcuts have two different keybinds!
-  - This game was inspired by the classin SNAKE game.
+  - This game was inspired by the classic SNAKE game.
   - All the levels are randomly generated so you won't have the same exact experience
     twice!
   - You gain points for every block you walk on!
